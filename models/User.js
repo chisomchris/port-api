@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 
 const UserSchema = new Schema({
-  username: {
+  email: {
     type: String,
     required: true,
   },
@@ -18,6 +18,8 @@ const UserSchema = new Schema({
     editor: Number,
   },
   refreshToken: String,
+  verificationStatus: { type: Boolean, default: false },
+  otpToken: String,
 });
 
 module.exports = model("User", UserSchema);

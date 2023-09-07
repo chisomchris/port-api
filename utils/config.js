@@ -9,4 +9,9 @@ const ROLES_LIST = {
   Editor: 2121,
   User: 1111,
 };
-module.exports = { allowedOrigins, ROLES_LIST };
+const OTP_ACTIONS = {
+  NewUser: 9090,
+  PasswordChange: 2121,
+};
+
+module.exports = { allowedOrigins, ROLES_LIST, OTP_ACTIONS };
